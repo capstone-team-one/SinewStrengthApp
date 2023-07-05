@@ -43,12 +43,38 @@ function HomePage() {
         style={[styles.image, styles.squareImage, styles.leftImage]}
       />
       <Image
-        source={require('./src/components/Images/woman_trainer.jpeg')}
-        style={[styles.image, styles.squareImage, styles.leftImage]}
+        source={require('./src/components/Images/woman_trainer_2.jpeg')}
+        style={[styles.image, styles.squareImage, styles.rightImage]}
       />
     </View>
   );
 }
+
+function About() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>We want for you to become the best you can be</Text>
+      <Image
+        source={require('./src/components/Images/programmer_face.jpeg')}
+        style={styles.image}
+      />
+      <Text style={styles.subtitle}>At Sinew Strength, we are more than just programmers;
+        we are a group of individuals on a journey of self-improvement through physical training. Our vision is to create an empowering community and a cutting-edge personal phone app that will revolutionize the way we approach fitness and well-being.</Text>
+      <Image
+        source={require('./src/components/Images/trainer_technology.jpeg')}
+        style={[styles.image, styles.squareImage, styles.leftImage]}
+      />
+        <Text style={styles.titleImage}>We will provide a supportive environmment where users can connect,share and uplift one another</Text>
+      <Image
+        source={require('./src/components/Images/personaltrainer_technology_2.jpeg')}
+        style={[styles.image, styles.squareImage, styles.rightImage]}
+      />
+    </View>
+  );
+}
+
+
+
 
 export default function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -79,6 +105,11 @@ export default function App() {
           <Section title="Home">
             <HomePage />
           </Section>
+           <Section title="About">
+            <About />
+          </Section>
+        
+        
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -115,6 +146,17 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     color: 'rgb(83, 104, 120)',
   },
+  titleImage: {
+    backgroundColor: '#f5f5f5',
+    padding: 16,
+    fontSize: 20,
+    fontWeight: '600',
+    color: 'rgb(83, 104, 120)',
+    width: 200,
+    height: 200,
+   marginLeft: 160,
+   
+  },
   subtitle: {
     fontSize: 18,
     fontWeight: '400',
@@ -148,4 +190,7 @@ const styles = StyleSheet.create({
   leftImage: {
     marginRight: 160,
   },
+  rightImage: {
+    marginLeft: 160,
+  }
 });
